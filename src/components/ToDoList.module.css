@@ -1,0 +1,67 @@
+.todoListContainer {
+  overflow: auto;
+
+  height: calc(100% - 42px);
+  max-width: 600px;
+
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .todoListContainer {
+    height: calc(100% - 105px);
+  }
+}
+
+.todoItem {
+  padding: 0.5rem;
+  margin: 1rem 0.5rem;
+}
+
+.todoCompletedTitle {
+  text-decoration: line-through;
+
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.todoTitleContainer {
+  width: calc(100% - 82px) !important;
+
+  white-space: nowrap;
+
+  align-self: center;
+
+  & > * {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+  }
+}
+
+.todoAddItemModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px 32px 24px;
+
+  background-color: rgb(255, 255, 255);
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0 11px 15px -7px,
+    rgba(0, 0, 0, 0.14) 0 24px 38px 3px, rgba(0, 0, 0, 0.12) 0 9px 46px 8px;
+  transform: translate(-50%, -50%);
+
+  & > * {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+.todoModalButtonContainer {
+  display: flex;
+  justify-content: space-between;
+}

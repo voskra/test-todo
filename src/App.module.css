@@ -1,0 +1,37 @@
+.container {
+  position: relative;
+
+  height: calc(100% - 80px);
+}
+
+.box {
+  overflow: hidden;
+
+  height: 100%;
+}
+
+.todoListButtonsContainer {
+  position: absolute;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  & > * {
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .todoListButtonsContainer {
+    position: relative;
+
+    flex-direction: row;
+    justify-content: center;
+
+    & > * {
+      margin-right: 1rem !important;
+    }
+  }
+}
